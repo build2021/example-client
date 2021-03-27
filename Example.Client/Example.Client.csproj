@@ -1,9 +1,36 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <CodeAnalysisRuleSet>..\Example.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="Usa.Smart.Core" Version="2.0.0-beta3" />
+    <PackageReference Include="Usa.Smart.Resolver" Version="2.0.0-beta2" />
+    <PackageReference Include="Usa.Smart.Resolver.Extensions.Configuration" Version="2.0.0-beta2" />
+    <PackageReference Include="Usa.Smart.Resolver.Extensions.DependencyInjection" Version="2.0.0-beta2" />
+    <PackageReference Include="Usa.Smart.Windows" Version="2.0.0-beta3" />
+    <PackageReference Include="Usa.Smart.Windows.Reactive" Version="2.0.0-beta3" />
+    <PackageReference Include="Usa.Smart.Windows.Resolver" Version="2.0.0-beta3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>True</ExcludeFromSingleFile>
+    </None>
+    <None Update="appsettings.Development.json">
+      <DependentUpon>appsettings.json</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>True</ExcludeFromSingleFile>
+    </None>
+  </ItemGroup>
 
 </Project>
