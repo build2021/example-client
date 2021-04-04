@@ -17,7 +17,7 @@ namespace Example.Client
         private readonly IHttpClientFactory httpClientFactory;
 
         public NotificationValue<int?> Id { get; } = new();
-        public NotificationValue<string?> Name { get; } = new();
+        public NotificationValue<string> Name { get; } = new();
         public NotificationValue<bool?> Flag { get; } = new();
         public NotificationValue<DateTime?> DateTime { get; } = new();
 
@@ -44,7 +44,7 @@ namespace Example.Client
             }
             else
             {
-                Name.Value = null;
+                Name.Value = string.Empty;
                 Flag.Value = null;
                 DateTime.Value = null;
             }
