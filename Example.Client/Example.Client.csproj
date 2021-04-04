@@ -11,6 +11,9 @@
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.4.4" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Rester" Version="2.0.0-beta1" />
+    <PackageReference Include="Rester.Serializers.System.Text.Json" Version="2.0.0-beta1" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
     <PackageReference Include="Usa.Smart.Core" Version="2.0.0-beta3" />
     <PackageReference Include="Usa.Smart.Resolver" Version="2.0.0-beta2" />
